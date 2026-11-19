@@ -1,0 +1,399 @@
+/* =========================================
+   SHOESTOP - PREMIUM E-COMMERCE DESIGN
+========================================= */
+
+
+/* =========================================
+   1. HERO BANNER
+========================================= */
+
+.banner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.banner-img {
+    width: 100%;
+    height: 85vh;
+    object-fit: cover;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.72),
+        rgba(6, 83, 97, 0.22)
+    );
+}
+
+.content {
+    position: absolute;
+    left: 10%;
+    top: 35%;
+    width: 80%;
+    color: white;
+    z-index: 2;
+}
+
+.content h1 {
+    font-size: clamp(36px, 5vw, 68px);
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+
+.content p {
+    font-size: 19px;
+    max-width: 500px;
+    line-height: 1.7;
+}
+
+.content > button {
+    margin: 1rem 1rem 1rem 0;
+    padding: 13px 28px;
+    border-radius: 30px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   2. PREMIUM PRODUCT SECTION
+========================================= */
+
+.shop-section {
+    padding: 85px 7%;
+    background: #f8f8f6;
+    color: #171717;
+}
+
+.shop-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.shop-eyebrow {
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    color: #a36b38;
+}
+
+.shop-heading h2 {
+    font-size: clamp(34px, 4vw, 54px);
+    font-weight: 800;
+    letter-spacing: -2px;
+    margin: 14px 0;
+}
+
+.shop-heading h2 span {
+    color: #a36b38;
+}
+
+.shop-heading p {
+    color: #777;
+    font-size: 16px;
+}
+
+
+/* =========================================
+   3. SEARCH AND FILTERS
+========================================= */
+
+.shop-toolbar {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin: 0 auto 25px;
+}
+
+.shop-toolbar input,
+.shop-toolbar select {
+    min-height: 48px;
+    padding: 0 18px;
+    border: 1px solid #e2e2df;
+    border-radius: 8px;
+    background: white;
+    color: #222;
+    font-size: 14px;
+    outline: none;
+}
+
+.shop-toolbar input {
+    width: min(350px, 100%);
+}
+
+.shop-toolbar input:focus,
+.shop-toolbar select:focus {
+    border-color: #a36b38;
+    box-shadow: 0 0 0 3px rgba(163, 107, 56, 0.12);
+}
+
+.shop-result-count {
+    max-width: 1400px;
+    margin: 0 auto 20px;
+    color: #777;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   4. PRODUCT GRID
+========================================= */
+
+.premium-product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 1400px;
+    margin: auto;
+}
+
+
+/* =========================================
+   5. PRODUCT CARDS
+========================================= */
+
+.premium-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    border: 1px solid #eeeeeb;
+}
+
+.premium-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.09);
+}
+
+
+/* =========================================
+   6. PRODUCT IMAGES
+========================================= */
+
+.premium-image-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background: #f0f0ed;
+}
+
+.premium-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.55s ease;
+}
+
+.premium-card:hover .premium-image-wrap img {
+    transform: scale(1.07);
+}
+
+.product-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #171717;
+    color: white;
+    padding: 7px 11px;
+    border-radius: 3px;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   7. PRODUCT DETAILS
+========================================= */
+
+.premium-card-info {
+    padding: 19px;
+}
+
+.premium-brand {
+    color: #a36b38;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.premium-card-info h3 {
+    font-size: 17px;
+    font-weight: 700;
+    margin: 9px 0 18px;
+    color: #222;
+    min-height: 42px;
+}
+
+
+/* =========================================
+   8. PRICE AND CART BUTTON
+========================================= */
+
+.premium-card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.premium-price {
+    font-size: 19px;
+    font-weight: 800;
+    color: #171717;
+}
+
+.premium-cart-btn {
+    border: none;
+    background: #171717;
+    color: white;
+    padding: 11px 13px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.25s ease;
+}
+
+.premium-cart-btn:hover {
+    background: #a36b38;
+}
+
+.premium-cart-btn span {
+    margin-left: 5px;
+    font-size: 16px;
+}
+
+
+/* =========================================
+   9. EMPTY SEARCH RESULT
+========================================= */
+
+.shop-empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px 20px;
+    color: #777;
+}
+
+
+/* =========================================
+   10. RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .premium-product-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .banner-img {
+        height: 60vh;
+    }
+
+    .content {
+        left: 7%;
+        top: 30%;
+        width: 86%;
+    }
+
+    .content p {
+        font-size: 16px;
+    }
+
+    .shop-section {
+        padding: 55px 5%;
+    }
+
+    .premium-product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .premium-card-info {
+        padding: 13px;
+    }
+
+    .premium-card-info h3 {
+        font-size: 15px;
+    }
+
+    .premium-card-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .premium-cart-btn {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 450px) {
+
+    .premium-product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .premium-card {
+        max-width: 380px;
+        width: 100%;
+        margin: auto;
+    }
+
+    .shop-toolbar {
+        flex-direction: column;
+    }
+
+
+    .shop-toolbar input,
+    .shop-toolbar select {
+        width: 100%;
+    }
+    
+}
+/* Favourite Heart Button */
+
+.favourite-heart {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #222222;
+    font-size: 27px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s ease, color 0.2s ease;
+    z-index: 5;
+}
+
+.favourite-heart:hover {
+    transform: scale(1.12);
+    color: #e63946;
+}
+
+.favourite-heart.active {
+    color: #e63946;
+}
